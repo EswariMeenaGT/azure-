@@ -16,4 +16,12 @@ $ packer validate azure/image/alma-linux-9.pkr.hcl
 $ packer build azure/image/alma-linux-9.pkr.hcl
 ```
 
+
+## Build Kubernetes cluster in Azure using Azure Resource Manager(ARM)
+```bash
+# Switch to Azure project directory.
+$ cd <PROJECT_ROOT_DIR>
  
+# Create Azure Kubernetes cluster
+$ az deployment group create -g sloopstash-prd -f arm/deployment/kubernetes.json
+...
